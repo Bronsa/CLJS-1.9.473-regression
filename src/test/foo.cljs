@@ -1,5 +1,5 @@
 (ns test.foo
-  (:require [devcards.core :refer-macros [defcard-rg]]))
+  (:require [sablono.core :as sab :include-macros true]))
 
-(defcard-rg foo
-  [:div "foo"])
+(defn foo []
+  (sab/html [:div (sab/html [:div])]))

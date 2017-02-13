@@ -5,6 +5,8 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.9.0-alpha14"]
                  [org.clojure/clojurescript "1.9.473"]
-                 [devcards "0.2.2"]]
+                 [sablono "0.7.4"]
+                 [cljsjs/react "15.4.2-2"]
+                 [cljsjs/react-dom "15.4.2-2"]]
   :exclusions [org.clojure/clojure
                org.clojure/clojurescript])
