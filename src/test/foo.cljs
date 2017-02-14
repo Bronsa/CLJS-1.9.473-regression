@@ -1,18 +1,7 @@
 (ns test.foo)
 
-(defprotocol IInterpreter
-  (interpret [this]))
-
-(extend-protocol IInterpreter
-  List
-  (interpret [this]
-    this)
-  default
-  (interpret [this]
-    this)
-  nil
-  (interpret [this]
-    nil))
+(defprotocol Proto
+  (f [this]))
 
 (defn foo []
-  (interpret (js/React.createElement "un" nil)))
+  (f js/Math.E))
