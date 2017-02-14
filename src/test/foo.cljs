@@ -1,5 +1,18 @@
-(ns test.foo
-  (:require [sablono.core :as sab :include-macros true]))
+(ns test.foo)
+
+(defprotocol IInterpreter
+  (interpret [this]))
+
+(extend-protocol IInterpreter
+  List
+  (interpret [this]
+    this)
+  default
+  (interpret [this]
+    this)
+  nil
+  (interpret [this]
+    nil))
 
 (defn foo []
-  (sab/html [:div (sab/html [:div])]))
+  (interpret (js/React.createElement "un" nil)))
